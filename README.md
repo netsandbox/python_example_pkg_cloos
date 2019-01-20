@@ -1,5 +1,9 @@
 # example_pkg_cloos
 
+[![image](https://img.shields.io/pypi/v/example_pkg_cloos.svg)](https://pypi.org/project/example-pkg-cloos)
+[![image](https://img.shields.io/pypi/l/example_pkg_cloos.svg)](https://pypi.org/project/example-pkg-cloos)
+[![image](https://img.shields.io/pypi/pyversions/example_pkg_cloos.svg)](https://pypi.org/project/example-pkg-cloos)
+
 A example package to learn and test Python packaging.
 
 https://packaging.python.org/tutorials/packaging-projects/
