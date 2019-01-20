@@ -35,4 +35,4 @@ upload_test: build ## upload to https://test.pypi.org
 
 .PHONY: upload
 upload: build ## upload to https://pypi.org
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	twine upload --repository-url https://pypi.org/legacy/ dist/*
