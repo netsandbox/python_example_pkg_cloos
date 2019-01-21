@@ -13,6 +13,7 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 @click.option("-b", "--bold", is_flag=True, help="Print text in bold?")
 @click.option("-c", "--color", required=True, type=click.Choice(["green", "yellow", "red"]), help="Text color.")
 @click.option("-t", "--text", required=True, help="Text to print.")
+@click.version_option()
 def main(bold, color, text):
     """ print text in color and optionally in bold """
 
