@@ -30,7 +30,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.6",
     ],
     install_requires=[
-        "click",
+        "click>=4.0",
     ],
     entry_points={
         "console_scripts": "example-pkg-cloos=example_pkg_cloos.cli:main"
