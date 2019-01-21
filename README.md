@@ -34,7 +34,7 @@ Install/Upgrade packaging tools:
 make install
 ```
 
-Install package in 'development mode'
+Install package in 'development mode':
 
 ```shell
 make develop
@@ -53,6 +53,10 @@ make upload
 ```
 
 ## Usage
+
+```shell
+pip install example-pkg-cloos
+```
 
 ### Cli
 
