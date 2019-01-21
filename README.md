@@ -40,6 +40,13 @@ Install package in 'development mode':
 make develop
 ```
 
+Create Git tag:
+
+```shell
+git tag -m "release 0.0.1" 0.0.1
+git push --tags
+```
+
 Upload to https://test.pypi.org/:
 
 ```shell
