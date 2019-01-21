@@ -1,13 +1,10 @@
 import setuptools
 
-from example_pkg_cloos import __version__
-
 with open("README.md") as f:
     long_description = f.read()
 
 setuptools.setup(
     name="example_pkg_cloos",
-    version=__version__,
     author="Christian Loos",
     author_email="cloos@netsandbox.de",
     description="A example package to learn and test Python packaging.",
@@ -29,6 +26,8 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
     ],
+    setup_requires=["setuptools_scm"],
+    use_scm_version=True,
     install_requires=[
         "click>=4.0",
     ],
