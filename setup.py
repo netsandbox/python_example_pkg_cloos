@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/cloos/python_example_pkg_cloos",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
