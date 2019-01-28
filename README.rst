@@ -48,6 +48,12 @@ Install package in 'development mode':
 
    $ make develop
 
+Run tests:
+
+.. code:: shell
+
+    $ make test
+
 Create Git tag:
 
 .. code:: shell
