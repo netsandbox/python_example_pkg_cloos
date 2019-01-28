@@ -15,6 +15,10 @@ install: ## install/upgrade packaging tools
 develop: ## install package in 'development mode'
 	python setup.py develop
 
+.PHONY: test
+test: ## run tests
+	tox
+
 .PHONY: clean
 clean: ## cleanup
 	@echo "Cleaning up distutils stuff"
@@ -24,6 +28,9 @@ clean: ## cleanup
 	@echo "Cleaning up byte compiled python stuff"
 	find . -type f -regex ".*\.py[co]$$" -delete
 	find . -type d -name "__pycache__" -delete
+	@echo "Cleaning up test stuff"
+	rm -rf .pytest_cache
+	rm -rf .tox
 
 .PHONY: build
 build: clean ## build
