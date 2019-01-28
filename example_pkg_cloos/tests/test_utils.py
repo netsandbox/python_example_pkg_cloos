@@ -1,5 +1,3 @@
-import pytest
-
 from example_pkg_cloos.utils import print_bar, print_foo
 
 
