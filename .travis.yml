@@ -15,6 +15,7 @@ matrix:
     - python: 3.7
       env: TOXENV=py37
     - env: TOXENV=flake8
+    - env: TOXENV=isort
 install:
   - pip install tox
 script:
