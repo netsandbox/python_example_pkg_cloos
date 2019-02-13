@@ -10,6 +10,8 @@ example_pkg_cloos
 .. image:: https://img.shields.io/pypi/pyversions/example_pkg_cloos.svg
    :target: https://pypi.org/project/example-pkg-cloos/
 
+.. image:: https://img.shields.io/travis/cloos/python_example_pkg_cloos/master.svg
+   :target: https://travis-ci.org/cloos/python_example_pkg_cloos/
 
 A example package to learn and test Python packaging.
 
