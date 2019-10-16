@@ -13,6 +13,10 @@ example_pkg_cloos
 .. image:: https://img.shields.io/travis/cloos/python_example_pkg_cloos/master.svg
    :target: https://travis-ci.org/cloos/python_example_pkg_cloos/
 
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/ambv/black
+   :alt: Code style: black
+
 A example package to learn and test Python packaging.
 
 https://packaging.python.org/tutorials/packaging-projects/
