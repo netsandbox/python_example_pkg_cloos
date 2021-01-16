@@ -4,12 +4,12 @@ help: ## show help
 
 .PHONY: venv
 venv: ## install/upgrade virtualenv and create venv
-	pip install --upgrade virtualenv
+	python3 -m pip install --upgrade virtualenv
 	virtualenv venv
 
 .PHONY: install
 install: ## install/upgrade packaging tools
-	pip install --upgrade setuptools twine wheel
+	pip install --upgrade setuptools tox twine wheel
 
 .PHONY: develop
 develop: ## install package in 'development mode'
