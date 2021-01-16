@@ -10,8 +10,9 @@ example_pkg_cloos
 .. image:: https://img.shields.io/pypi/pyversions/example_pkg_cloos.svg
    :target: https://pypi.org/project/example-pkg-cloos/
 
-.. image:: https://img.shields.io/travis/cloos/python_example_pkg_cloos/master.svg
-   :target: https://travis-ci.org/cloos/python_example_pkg_cloos/
+.. image:: https://github.com/cloos/python_example_pkg_cloos/workflows/Python%20package/badge.svg
+   :target: https://github.com/cloos/python_example_pkg_cloos/actions?query=workflow%3A%22Python+package%22
+   :alt: Build
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/ambv/black
