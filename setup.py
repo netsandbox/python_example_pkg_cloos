@@ -39,7 +39,5 @@ setuptools.setup(
     install_requires=[
         "click>=4.0",
     ],
-    entry_points={
-        "console_scripts": "example-pkg-cloos=example_pkg_cloos.cli:main"
-    },
+    entry_points={"console_scripts": "example-pkg-cloos=example_pkg_cloos.cli:main"},
 )
