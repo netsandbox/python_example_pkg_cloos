@@ -2,22 +2,20 @@
 help: ## show help
 	@grep -h '##\ [[:alnum:]]' $(MAKEFILE_LIST) | sed -E 's/(.*):.*##(.*)/\1: \2/' | column -s: -t
 
-.PHONY: venv
-venv: ## install/upgrade virtualenv and create venv
-	python3 -m pip install --upgrade virtualenv
-	virtualenv venv
+venv: ## create venv
+	python3 -m venv venv
 
-.PHONY: install
-install: ## install/upgrade packaging tools
-	pip install --upgrade setuptools tox twine wheel
+.PHONY: pip
+pip: venv ## install/upgrade packaging tools
+	venv/bin/pip install --upgrade --upgrade-strategy eager pip setuptools tox twine wheel
 
 .PHONY: develop
-develop: ## install package in 'development mode'
-	python setup.py develop
+develop: pip ## install package in 'development mode'
+	venv/bin/python setup.py develop
 
 .PHONY: test
-test: ## run tests
-	tox
+test: pip ## run tests
+	venv/bin/tox
 
 .PHONY: clean
 clean: ## cleanup
@@ -34,12 +32,12 @@ clean: ## cleanup
 
 .PHONY: build
 build: clean ## build
-	python setup.py sdist bdist_wheel
+	venv/bin/python setup.py sdist bdist_wheel
 
 .PHONY: upload_test
 upload_test: build ## upload to https://test.pypi.org
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	venv/bin/twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 .PHONY: upload
 upload: build ## upload to https://pypi.org
-	twine upload dist/*
+	venv/bin/twine upload dist/*

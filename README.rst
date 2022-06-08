@@ -30,24 +30,6 @@ Checkout git repository:
 
    $ git clone git@github.com:cloos/python_example_pkg_cloos.git
 
-Create virtualenv:
-
-.. code:: shell
-
-   $ make venv
-
-Activate virtualenv:
-
-.. code:: shell
-
-   $ source venv/bin/activate
-
-Install/Upgrade packaging tools:
-
-.. code:: shell
-
-   $ make install
-
 Install package in 'development mode':
 
 .. code:: shell
