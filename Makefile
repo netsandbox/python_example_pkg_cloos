@@ -5,16 +5,16 @@ help: ## show help
 venv: ## create venv
 	python3 -m venv venv
 
-.PHONY: pip
-pip: venv ## install/upgrade packaging tools
-	venv/bin/pip install --upgrade --upgrade-strategy eager pip setuptools tox twine wheel
+.PHONY: install
+install: venv ## install/upgrade packaging tools
+	venv/bin/pip install --upgrade --upgrade-strategy eager build pip tox twine
 
 .PHONY: develop
-develop: pip ## install package in 'development mode'
-	venv/bin/python setup.py develop
+develop: install ## install package in 'development mode'
+	venv/bin/python -m pip install -e .
 
 .PHONY: test
-test: pip ## run tests
+test: install ## run tests
 	venv/bin/tox
 
 .PHONY: clean
@@ -32,11 +32,11 @@ clean: ## cleanup
 
 .PHONY: build
 build: clean ## build
-	venv/bin/python setup.py sdist bdist_wheel
+	venv/bin/python -m build
 
 .PHONY: upload_test
 upload_test: build ## upload to https://test.pypi.org
-	venv/bin/twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	venv/bin/twine upload --repository testpypi dist/*
 
 .PHONY: upload
 upload: build ## upload to https://pypi.org

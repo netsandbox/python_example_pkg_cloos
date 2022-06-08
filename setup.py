@@ -1,7 +1,7 @@
 import setuptools
 
-with open("README.md") as f:
-    long_description = f.read()
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setuptools.setup(
     name="example_pkg_cloos",
@@ -9,9 +9,9 @@ setuptools.setup(
     author_email="cloos@netsandbox.de",
     description="A example package to learn and test Python packaging.",
     long_description=long_description,
-    long_description_content_type="text/x-rst",
+    long_description_content_type="text/markdown",
     license="MIT",
-    url="https://github.com/cloos/python_example_pkg_cloos",
+    url="https://github.com/netsandbox/python_example_pkg_cloos",
     packages=setuptools.find_packages(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
