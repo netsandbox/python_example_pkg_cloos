@@ -19,15 +19,9 @@ test: install ## run tests
 
 .PHONY: clean
 clean: ## cleanup
-	@echo "Cleaning up distutils stuff"
-	rm -rf build
 	rm -rf dist
-	rm -rf *.egg-info/
-	@echo "Cleaning up byte compiled python stuff"
-	find . -type f -regex ".*\.py[co]$$" -delete
-	find . -type d -name "__pycache__" -delete
-	@echo "Cleaning up test stuff"
-	rm -rf .pytest_cache
+	find src/ tests/ -type f -regex ".*\.py[co]$$" -delete
+	find src/ tests/ -type d -name "__pycache__" -delete
 	rm -rf .tox
 
 .PHONY: build
