@@ -7,22 +7,23 @@ venv: ## create venv
 
 .PHONY: install
 install: venv ## install/upgrade packaging tools
-	venv/bin/pip install --upgrade --upgrade-strategy eager build pip tox twine
+	venv/bin/pip install --upgrade --upgrade-strategy eager build pip twine
 
 .PHONY: develop
 develop: install ## install package in 'development mode'
 	venv/bin/python -m pip install -e .
 
 .PHONY: test
-test: install ## run tests
+test: ## run tests
+	venv/bin/pip install --upgrade --upgrade-strategy eager tox
 	venv/bin/tox
 
 .PHONY: clean
 clean: ## cleanup
-	rm -rf dist
-	find src/ tests/ -type f -regex ".*\.py[co]$$" -delete
-	find src/ tests/ -type d -name "__pycache__" -delete
 	rm -rf .tox
+	rm -rf dist
+	rm -rf src/*.egg-info
+	rm -rf tests/__pycache__
 
 .PHONY: build
 build: clean ## build
