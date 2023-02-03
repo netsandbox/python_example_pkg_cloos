@@ -8,7 +8,7 @@ description = "A example package to learn and test Python packaging."
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">= 3.7"
-license.file = "LICENSE"
+license = {file = "LICENSE"}
 authors = [
   { name = "Christian Loos", email = "cloos@netsandbox.de" },
 ]
@@ -42,8 +42,10 @@ dependencies = [
 example-pkg-cloos = "example_pkg_cloos.cli:main"
 
 [project.urls]
-"Homepage" = "https://github.com/netsandbox/python_example_pkg_cloos"
-"Bug Tracker" = "https://github.com/netsandbox/python_example_pkg_cloos/issues"
+Documentation = "https://github.com/netsandbox/python_example_pkg_cloos"
+Homepage = "https://github.com/netsandbox/python_example_pkg_cloos"
+Issues = "https://github.com/netsandbox/python_example_pkg_cloos/issues"
+Source = "https://github.com/netsandbox/python_example_pkg_cloos"
 
 [tool.black]
 line-length = 160
